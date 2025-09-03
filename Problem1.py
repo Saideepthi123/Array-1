@@ -1,4 +1,9 @@
 class Solution(object):
+# tc : O(2n) 2 for loops -> O(n)
+# sc : O(1) no extra space used just variables which is O(1), the product array is the output array of space n and given
+# The output array does not count as extra space for space complexity analysis
+# // Did this code successfully run on Leetcode : Yes
+
     def productExceptSelf(self, nums):
         """
         :type nums: List[int]
@@ -10,9 +15,7 @@ class Solution(object):
         # and then have one more for loop to multiple the left product with the right product at that index 
         # will return the product array which is the product of all elemenst except self
 
-        # tc : O(2n) 2 for loops -> O(n)
-        # sc : O(1) no extra space used just variables which is O(1), the product array is the output array of space n and given
-        # The output array does not count as extra space for space complexity analysis
+        
         product_array = [1]*len(nums)
 
         right_product = 1
